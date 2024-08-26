@@ -6,8 +6,8 @@ const postSchema = new mongoose.Schema({
         required: true
     },
     author: {
-        type: String,
-        required: true
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"User",
     },
     tags: {
         type: [String]
